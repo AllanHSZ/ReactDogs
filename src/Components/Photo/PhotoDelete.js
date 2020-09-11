@@ -6,7 +6,7 @@ import { PHOTO_DELETE } from '../../api';
 const PhotoDelete = ({ id }) => {
   const { loading, request } = useFetch();
 
-  async function handleClick(event) {
+  async function handleClick() {
     const confirm = window.confirm('Tem certeza que deseja deletar?');
     if (confirm) {
       const { url, options } = PHOTO_DELETE(id);
@@ -22,7 +22,7 @@ const PhotoDelete = ({ id }) => {
           Deletar
         </button>
       ) : (
-        <button className={styles.delete} onClick={handleClick}>
+        <button onClick={handleClick} className={styles.delete}>
           Deletar
         </button>
       )}

@@ -27,7 +27,7 @@ const LoginCreate = () => {
     if (response.ok) userLogin(username.value, password.value);
   }
   return (
-    <section className="animeleft">
+    <section className="animeLeft">
       <Head title="Crie sua conta" />
       <h1 className="title">Cadastre-se</h1>
       <form onSubmit={handleSubmit}>
@@ -39,7 +39,7 @@ const LoginCreate = () => {
         ) : (
           <Button>Cadastrar</Button>
         )}
-        <Error error={error}></Error>
+        <Error error={error} />
       </form>
     </section>
   );

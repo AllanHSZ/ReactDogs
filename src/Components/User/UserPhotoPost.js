@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './UserPhotoPost.module.css';
 import useForm from '../../Hooks/useForm';
 import useFetch from '../../Hooks/useFetch';
-import Input from '../../Components/Forms/Input';
-import Button from '../../Components/Forms/Button';
+import Input from '../Forms/Input';
+import Button from '../Forms/Button';
 import Error from '../Helper/Error';
 import { PHOTO_POST } from '../../api';
 import { useNavigate } from 'react-router-dom';
@@ -42,13 +42,12 @@ const UserPhotoPost = () => {
   }
 
   return (
-    <section className={`${styles.photoPost} animeleft`}>
+    <section className={`${styles.photoPost} animeLeft`}>
       <Head title="Poste sua foto" />
-
       <form onSubmit={handleSubmit}>
         <Input label="Nome" type="text" name="nome" {...nome} />
-        <Input label="peso" type="number" name="peso" {...peso} />
-        <Input label="Idade" type="number" name="nome" {...idade} />
+        <Input label="Peso" type="number" name="peso" {...peso} />
+        <Input label="Idade" type="number" name="idade" {...idade} />
         <input
           className={styles.file}
           type="file"
@@ -63,12 +62,14 @@ const UserPhotoPost = () => {
         )}
         <Error error={error} />
       </form>
-      {img.preview && (
-        <div
-          className={styles.preview}
-          style={{ backgroundImage: `url('${img.preview}')` }}
-        ></div>
-      )}
+      <div>
+        {img.preview && (
+          <div
+            className={styles.preview}
+            style={{ backgroundImage: `url('${img.preview}')` }}
+          ></div>
+        )}
+      </div>
     </section>
   );
 };

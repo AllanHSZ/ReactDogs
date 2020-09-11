@@ -8,7 +8,7 @@ body {
   margin: 0px;
   color: #333;
   padding-top: 4rem;
-  --tyoe-first: Helvetica, Arial, sans-serif;
+  --type-first: Helvetica, Arial, sans-serif;
   --type-second: 'Spectral', Georgia;
   font-family: var(--type-first);
 }

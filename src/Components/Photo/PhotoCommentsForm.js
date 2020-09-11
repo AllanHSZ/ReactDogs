@@ -26,6 +26,7 @@ const PhotoCommentsForm = ({ id, setComments, single }) => {
     >
       <textarea
         className={styles.textarea}
+        id="comment"
         value={comment}
         name="comment"
         placeholder="Comente..."

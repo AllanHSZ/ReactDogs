@@ -8,7 +8,8 @@ const UserHeader = () => {
   const location = useLocation();
 
   React.useEffect(() => {
-    switch (location.pathname) {
+    const { pathname } = location;
+    switch (pathname) {
       case '/conta/postar':
         setTitle('Poste Sua Foto');
         break;
